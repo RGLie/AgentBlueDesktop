@@ -189,6 +189,27 @@ class _SessionPanelState extends State<SessionPanel>
                     color: AppColors.textMuted,
                   ),
                 ),
+                const SizedBox(height: 10),
+                Container(
+                  width: double.infinity,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFFFA726).withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(
+                      color: const Color(0xFFFFA726).withOpacity(0.3),
+                    ),
+                  ),
+                  child: const Text(
+                    '⚠ 세션 코드를 절대 타인에게 공유하지 마세요. 코드를 아는 제3자가 기기를 원격 조작할 수 있습니다.',
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Color(0xFFFFA726),
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
                 const SizedBox(height: 16),
                 if (_pairingStatus == 'none') _buildCreateButton(),
                 if (_sessionCode != null && _pairingStatus != 'none') ...[
